@@ -30,7 +30,7 @@
                     <li class="nav-item"><a class="nav-link" href="contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="log">
                     <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>
@@ -42,7 +42,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login </h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close dismiss">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -78,7 +78,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Reserve a Table </h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close dismiss">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -154,7 +154,7 @@
                 <div class="col-12 col-sm-3 align-self-center">
                     <img src="img/logo.png" class="img-fluid">
                 </div>
-                <a class="col-12 col-sm-3 align-self-center" data-toggle="modal" data-target="#reserve">
+                <a class="col-12 col-sm-3 align-self-center" id="rb">
                     <button type="submit" class="btn btn-lg btn-block btn-warning">Reserve Table</button>
                 </a>
             </div>
@@ -269,6 +269,18 @@
                     $("#carouselButton").children("span").removeClass('fa-play');
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
+            });
+            $("#rb").click(function(){
+                $('#reserve').modal('show');
+                $('.dismiss').click(function(){
+                    $('#reserve').modal('hide');
+                });
+            });
+            $("#log").click(function(){
+                $('#loginModal').modal('show');
+                $('.dismiss').click(function(){
+                    $('#loginModal').modal('hide');
+                });
             });
         });
     </script>
