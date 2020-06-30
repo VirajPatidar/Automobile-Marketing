@@ -72,6 +72,78 @@
             </div>
         </div>
     </div>
+    <div id="reserve" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a Table </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <label for="approve" class="col-12 col-md-2 col-form-label">Number of Guests</label>
+                            <div class="col-12 col-md-10">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="guest" id="guest1" value="1">
+                                    <label class="form-check-label" for="guest1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="guest" id="guest2" value="2">
+                                    <label class="form-check-label" for="guest2">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="guest" id="guest3" value="3">
+                                    <label class="form-check-label" for="guest3">3</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="guest" id="guest4" value="4">
+                                    <label class="form-check-label" for="guest4">4</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="guest" id="guest5" value="5">
+                                    <label class="form-check-label" for="guest5">5</label>
+                                </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="guest" id="guest6" value="6">
+                                    <label class="form-check-label" for="guest6">6</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="date" class="col 12 col-md-2 col-form-label">Section</label>
+                            <div class="btn-group btn-group-toggle col-12 col-md-auto" data-toggle="buttons">
+                                <label class="btn btn-success active">
+                                  <input type="radio" name="non-smoking" id="non-smoking" autocomplete="on" checked> Non-smoking
+                                </label>
+                                <label class="btn btn-danger">
+                                  <input type="radio" name="smoking" id="smoking" autocomplete="off"> Smoking
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="date" class="col 12 col-md-2 col-form-label">Date and time</label>
+                            <div class=" col-12 col-md-4">
+                              <input type="text" class="form-control" id="date" name="date" placeholder="Date" onfocus="(this.type='date')">
+                            </div>
+                            <div class=" col-12 col-md-4">
+                              <input type="text" class="form-control" id="time" name="time" placeholder="Time" onfocus="(this.type='time')">
+                            </div>
+                        </div>
+                        <div class="form-group row offset-md-2 col-md-auto">
+                            <div class="mr-1">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-primary">Reserve</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <header class = "jumbotron">
         <div class = "container">
             <div class = "row row-header">
@@ -82,8 +154,7 @@
                 <div class="col-12 col-sm-3 align-self-center">
                     <img src="img/logo.png" class="img-fluid">
                 </div>
-                <a href="#reserve" class="col-12 col-sm-3 align-self-center" data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
-                    data-placement="bottom">
+                <a class="col-12 col-sm-3 align-self-center" data-toggle="modal" data-target="#reserve">
                     <button type="submit" class="btn btn-lg btn-block btn-warning">Reserve Table</button>
                 </a>
             </div>
@@ -97,9 +168,9 @@
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
                             <img class="d-block img-fluid"
-                                src="img/uthappizza.png" alt="Uthappizza">
+                                src="img/uthappizza.png" alt="Uttappizza">
                             <div class="carousel-caption d-none d-md-block">
-                                <h2>Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-default badge-secondary">$4.99</span></h2>
+                                <h2>Uttappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-default badge-secondary">$4.99</span></h2>
                                 <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine
                                 cherry tomatoes, Vidalia onion, Guntur chillies and
                                 Buffalo Paneer.</p>
@@ -135,119 +206,6 @@
                 </div>
             </div>
         </div>
-        <div class = "row row-content align-items-center">
-            <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                <h3>Our Lipsmacking Culinary Creations</h3>
-            </div>
-            <div class="col-12 col-sm order-sm-first col-md">
-                <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center"
-                            src="img/uthappizza.png" alt="Uthappizza">
-                    <div class="media-body">
-                        <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT </span> <span class="badge badge-pill badge-secondary">$4.99</span></h2>
-                        <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
-                            Italian pizza, topped with Cerignola olives, ripe vine
-                            cherry tomatoes, Vidalia onion, Guntur chillies and
-                            Buffalo Paneer.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div  class = "row row-content align-items-center">
-            <div class="col-12 col-sm-4 col-md-3">
-                <h3>This Month's Promotions</h3>
-            </div>
-            <div class="col-12 col-sm col-md">
-                <div class="media d-flex flex-row-reverse">
-                    <img class="ml-3 img-thumbnail align-self-center"
-                            src="img\buffet.png" alt="Uthappizza">
-                    <div class="media-body">
-                        <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
-                        <p class = "d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class = "row row-content align-items-center">
-            <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                <h3>Meet our Culinary Specialists</h3>
-            </div>
-            <div class="col-12 col-sm order-sm-first col-md">
-                <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center"
-                            src="img/alberto.png" alt="Alberto Somayya">
-                    <div class="media-body">
-                        <h2 class="mt-0">Alberto Somayya</h2>
-                        <h4>Executive Chef</h4>
-                        <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide
-                            International experience having worked closely with
-                            whos-who in the culinary world, he specializes in
-                            creating mouthwatering Indo-Italian fusion experiences.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class ="container">
-        <div class = "row row-content">
-            <div class="col-12 col-sm-8 offset-sm-2">
-                <div class="card">
-                    <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
-                    <div class="card-body">
-                        <form id="reserve">
-                            <div class="form-group row">
-                                <label for="approve" class="col-12 col-md-2 col-form-label">Number of Guests</label>
-                                <div class="col-12 col-md-10">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="guest" id="guest1" value="1">
-                                        <label class="form-check-label" for="guest1">1</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="guest" id="guest2" value="2">
-                                        <label class="form-check-label" for="guest2">2</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="guest" id="guest3" value="3">
-                                        <label class="form-check-label" for="guest3">3</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="guest" id="guest4" value="4">
-                                        <label class="form-check-label" for="guest4">4</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="guest" id="guest5" value="5">
-                                        <label class="form-check-label" for="guest5">5</label>
-                                    </div>
-                                      <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="guest" id="guest6" value="">
-                                        <label class="form-check-label" for="guest6">6</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="date" class="col 12 col-md-2 col-form-label">Date and time</label>
-                                <div class=" col-12 col-md-4">
-                                  <input type="text" class="form-control" id="date" name="date" placeholder="Date" onfocus="(this.type='date')">
-                                </div>
-                                <div class=" col-12 col-md-4">
-                                  <input type="text" class="form-control" id="time" name="time" placeholder="Time" onfocus="(this.type='time')">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="offset-md-2 col-md-10">
-                                    <button type="submit" class="btn btn-primary">Reserve</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <footer class = "footer">
         <div class = "container">
@@ -294,10 +252,5 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
 </body>
 </html>
